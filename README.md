@@ -28,6 +28,6 @@ Where
 - Genotypes should start at column 7
 - The first 6 columns should be:
 
-CHROM, SNP_id, RS_id, position, ref_allele, alt_allele
+```CHROM, SNP_id, RS_id, position, ref_allele, alt_allele```
 
 
