@@ -44,9 +44,9 @@ colnames(sample) = colnames(coltypes)
 sample = sample[, c(phenocol, covarcols)]
 coltypes = coltypes[, c(phenocol, covarcols)]
 # Set discrete vars as factors
-sample[, coltypes == "D"] = lapply(sample[, coltypes == "D"], factor)
+sample[, coltypes == "D"] = lapply(sample[, coltypes == "D", drop=F], factor)
 # Set continuous vars as numerics
-sample[, coltypes == "C"] = lapply(sample[, coltypes == "C"], as.numeric)
+sample[, coltypes == "C"] = lapply(sample[, coltypes == "C", drop=F], as.numeric)
 
 # Get list of complete.cases
 to_keep = complete.cases(sample)
